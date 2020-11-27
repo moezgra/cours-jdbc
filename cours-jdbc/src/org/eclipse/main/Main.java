@@ -1,7 +1,12 @@
 package org.eclipse.main;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
+import org.eclipse.dao.AdresseDao;
 import org.eclipse.dao.PersonneDao;
 import org.eclipse.dao.VehiculeDao;
+import org.eclipse.model.Adresse;
 import org.eclipse.model.Personne;
 import org.eclipse.model.Vehicule;
 import org.eclipse.service.PersonneService;
@@ -90,14 +95,56 @@ public class Main {
 		 */
 		
 		//PersonneService Remove:
-		PersonneService personneService = new PersonneService();
-		Personne personne = new Personne(800);
-		personneService.remove(personne);
+		/*
+		 * PersonneService personneService = new PersonneService(); Personne personne =
+		 * new Personne(800); personneService.remove(personne);
+		 */
+		//personne service suppr la personne Mais PAS ses vehicules
+		/*PersonneService personneService = new PersonneService();
+		Personne personne = new Personne(6);
+		personneService.remove(personne);*/
+	
+		//personne service findAll
+		/*PersonneService personneService = new PersonneService();
+		for(Personne personne: personneService.findAll()) {
+			System.out.println(personne);
+		}*/
+		
+		//adresseDao save :
+		/*
+		 * AdresseDao adresseDao = new AdresseDao(); Adresse adresse = new
+		 * Adresse("Paradis", "13015", "Marseille", null);
+		 * System.out.println(adresseDao.save(adresse));
+		 */
+		//adresse daosave :
+		/*
+		 * AdresseDao adresseDao = new AdresseDao(); Personne personne1 = new
+		 * Personne("Cage", "Nicolas"); Personne personne2 = new Personne("Segal",
+		 * "Steven"); ArrayList<Personne> personnes = new
+		 * ArrayList<Personne>(Arrays.asList(personne1, personne2)); Adresse adresse =
+		 * new Adresse("Défense", "75000", "Paris", personnes);
+		 * System.out.println(adresseDao.save(adresse));
+		 */
+		/*
+		 * AdresseDao adresseDao = new AdresseDao(); PersonneDao personneDao = new
+		 * PersonneDao(); Personne personne1 = new Personne("Jolie", "Angelina");
+		 * Personne personne2 = personneDao.findById(17); ArrayList<Personne> personnes
+		 * = new ArrayList<Personne>(Arrays.asList(personne1, personne2)); Adresse
+		 * adresse = new Adresse("Défense", "75000", "Paris", personnes);
+		 * System.out.println(adresseDao.save(adresse));
+		 */
+		
+		//remove:
+		/*
+		 * AdresseDao adresseDao = new AdresseDao(); Adresse adresse = new Adresse(4);
+		 * adresseDao.remove(adresse);
+		 */
+		//findById
+		//AdresseDao adresseDao = new AdresseDao();
+		//System.out.println(adresseDao.findById(3));
+		
+		AdresseDao adresseDao = new AdresseDao();
+		System.out.println(adresseDao.findAll());
 	}
-	
-}
 
-	
-		  
-		 
-	
+}
